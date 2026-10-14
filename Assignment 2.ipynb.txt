@@ -1,0 +1,407 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "0cad6a81-f11c-4c1d-ae64-7cd355e975b8",
+   "metadata": {},
+   "source": [
+    "Q1. employee = (\"Ali\", 25, \"Data Analyst\", 75000)\n",
+    "\n",
+    "Unpack the tuple into variables.\n",
+    "Increase the salary by 10%.\n",
+    "Display the updated salary."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "d723f45a-0809-4fdf-be59-ae465f5893c6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "82500.0"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "employee = (\"Ali\", 25, \"Data Analyst\", 75000)\n",
+    "name , age , job , salary = employee\n",
+    "salary = salary + (salary * 0.10)\n",
+    "salary\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ec489f2b-f01c-4f5c-848c-9cb76ebfe2d9",
+   "metadata": {},
+   "source": [
+    "Q2. You are given a list that contains some duplicate items. Remove the duplicates by converting the list to a set. Final output should be in list\n",
+    "\n",
+    "shopping_list = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"grape\"]\n",
+    "\n",
+    "Expected Output: ['apple', 'grape', 'banana', 'orange']"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "6de3c2ad-672d-4f84-9c9e-ad4f951a620c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['orange', 'banana', 'grape', 'apple']"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "shopping_list = [\"apple\", \"banana\", \"apple\", \"orange\", \"banana\", \"grape\"]\n",
+    "shopping_list = set(shopping_list)\n",
+    "shopping_list = list(shopping_list)\n",
+    "shopping_list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "456f8a7d-d50f-43ea-8f40-c95c08865657",
+   "metadata": {},
+   "source": [
+    "Q3. You are managing a list of students enrolled in two different courses. You need to perform various set operations to understand the student enrollment. Task: Create two sets: one for students in \"Course A\" and one for students in \"Course B\". Find the students who are in \"Course A\" but not in \"Course B\" (difference). Find students who are only in one of the two courses (symmetric difference). course_a = {\"John\", \"Alice\", \"Bob\", \"David\"} course_b = {\"Alice\", \"Eve\", \"Charlie\", \"David\"}\n",
+    "\n",
+    "Using set methods\n",
+    "\n",
+    "• Find students who are in Course A but not in Course B (difference)\n",
+    "\n",
+    "• Find students who are only in one of the two courses (symmetric difference)\n",
+    "\n",
+    "Expected Output:\n",
+    "\n",
+    "Students in Course A but not in Course B: {'Bob', 'John'}\n",
+    "\n",
+    "Students only in one of the two courses: {'Eve', 'John', 'Bob', 'Charlie'}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "c492297b-6ef8-4582-ae93-acc1c3206e09",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Bob', 'Charlie', 'Eve', 'John'}"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "course_a = {\"John\", \"Alice\", \"Bob\", \"David\"} \n",
+    "course_b = {\"Alice\", \"Eve\", \"Charlie\", \"David\"}\n",
+    "difference = course_a.difference(course_b)\n",
+    "symmetric_difference = course_b.symmetric_difference(course_a)\n",
+    "difference\n",
+    "symmetric_difference\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "db7a75ae-912d-4734-95b0-96899631c939",
+   "metadata": {},
+   "source": [
+    "Q4. numbers = (10, 20, 30, 40, 50, 60, 70)\n",
+    "\n",
+    "Display the first 3 elements.\n",
+    "Display the last 3 elements.\n",
+    "Display alternate elements."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "6bb5e18a-cc6f-4a2d-9653-18f05d030f99",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "First Three elements : (10, 20, 30)\n",
+      "Last three elements : (50, 60, 70)\n"
+     ]
+    }
+   ],
+   "source": [
+    "numbers = (10, 20, 30, 40, 50, 60, 70)\n",
+    "print(\"First Three elements :\" , numbers[:3])\n",
+    "print(\"Last three elements :\" ,  numbers[-3:])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3c221fa5-86da-455b-a70e-3d2e62f4667e",
+   "metadata": {},
+   "source": [
+    "Q5. Combine Two Sets\n",
+    "A = {\"Ali\", \"Sara\"}\n",
+    "B = {\"Ahmed\", \"Zara\"}\n",
+    "\n",
+    "Combine both sets into one set."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "1f4af36b-d84d-4cb2-92ab-1a03896bd892",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Ahmed', 'Ali', 'Sara', 'Zara'}"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "A = {\"Ali\", \"Sara\"}\n",
+    "B = {\"Ahmed\", \"Zara\"}\n",
+    "C = A.union(B)\n",
+    "C\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a00074dc-425b-4d61-a088-30923c7a13bb",
+   "metadata": {},
+   "source": [
+    "Q6. Set Comparison\n",
+    "A = {1, 2, 3, 4, 5}\n",
+    "B = {4, 5, 6, 7}\n",
+    "\n",
+    "Find common elements.\n",
+    "Find elements only in Set A.\n",
+    "Find elements only in Set B."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "66a35ac1-6d07-49d4-8f7f-8891a766e5eb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Common elements: {4, 5}\n",
+      "Only in Set A: {1, 2, 3}\n",
+      "Only in Set B: {8, 6, 7}\n"
+     ]
+    }
+   ],
+   "source": [
+    "A = {1, 2, 3, 4, 5}\n",
+    "B = {4, 5, 6, 7,8}\n",
+    "print(\"Common elements:\", A & B)\n",
+    "print(\"Only in Set A:\", A - B)\n",
+    "print(\"Only in Set B:\", B - A)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "82f1a7a7-9735-4f88-8a17-3e4e45b57ed4",
+   "metadata": {},
+   "source": [
+    "Q7. Given the tuple my_tuple = (1, 2, 3, 4, 5), remove the element 3 from the tuple by first converting it to a list, and then print the resulting tuple."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "a35c5595-35f6-4922-9ef5-2af5852a480a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(1, 2, 4, 5)"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "my_tuple = (1, 2, 3, 4, 5)\n",
+    "my_tuple = list(my_tuple)\n",
+    "my_tuple.remove(3)\n",
+    "my_tuple = tuple(my_tuple)\n",
+    "my_tuple"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "97fe8233-d9ba-4199-acb8-dccab3537ef8",
+   "metadata": {},
+   "source": [
+    "Q8. Given the tuple numbers = (10, 20, 5, 30, 15), find and print the maximum and minimum values in the tuple."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "bf9837aa-a8ff-45cc-8948-1094fce927a1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "30"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "numbers = (10, 20, 5, 30, 15)\n",
+    "print(min(numbers))\n",
+    "max(numbers)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0e99e438-5a64-4ae7-b148-2715b9899165",
+   "metadata": {},
+   "source": [
+    "Q9. Given the tuple coordinates = (4, 5, 6), unpack the elements of the tuple into three variables x, y, and z. Then, calculate and print the sum of the variables."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "b6679394-f414-401a-b2fe-0fd22e05ded9",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "15"
+      ]
+     },
+     "execution_count": 41,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "coordinates = (4, 5, 6)\n",
+    "x , y , z = coordinates\n",
+    "A = x+y+z\n",
+    "A"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3e592c4e-2829-466a-b99f-a5c9c7f76896",
+   "metadata": {},
+   "source": [
+    "Q10. Create a program that takes the user's first name, last name, and age as input, packs them into a tuple, and prints the tuple."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "48bb06b9-5713-45f8-8ea7-f46565b700ab",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdin",
+     "output_type": "stream",
+     "text": [
+      "Enter your name's ali\n",
+      "Enter your name's abbas\n",
+      "Enter your age 12\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "User info :  ('ali', 'abbas', 12)\n"
+     ]
+    }
+   ],
+   "source": [
+    "first_name=str(input(\"Enter your name's\"))\n",
+    "last_name = str(input(\"Enter your name's\"))\n",
+    "age = int(input(\"Enter your age\"))\n",
+    "info = (first_name , last_name ,age)\n",
+    "print(\"User info : \" , info)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8b405228-0dbf-4698-9bc5-96180ea81266",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {},
+    "version_major": 2,
+    "version_minor": 0
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
